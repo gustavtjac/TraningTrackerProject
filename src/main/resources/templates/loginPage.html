@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TrainingLogger</title>
+    <link rel="stylesheet" href="/css/loginstyle.css">
 </head>
 <body>
+<div class="container">
+    <!-- Login Form -->
 
+    <div class="form-container">
+        <p id="errorMessage"th:text="${errorMessage}"></p>
+        <h2>Login</h2>
+        <form th:action="@{/loginrequest}" th:method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="form-container">
+        <h2>Register</h2>
+        <form action="/register" method="post">
+            <label for="register-username">Username</label>
+            <input type="text" id="register-username" name="username" required>
+
+            <label for="register-password">Password</label>
+            <input type="password" id="register-password" name="password" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>
