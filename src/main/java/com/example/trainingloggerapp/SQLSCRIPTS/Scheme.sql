@@ -6,14 +6,15 @@ use trainingLoggerDatabase;
 
 
 Create table USERS (
-USER_ID int auto_increment primary key,
-USER_USERNAME VARCHAR(30) not null unique,
+USER_USERNAME VARCHAR(30) not null unique primary key,
+USER_NAME varchar(30),
 USER_PASSWORD varchar(55) not null);
+
 
 Create table TRANINGSPROGRAMS (
 TP_ID int auto_increment primary key,
-TP_USER_ID int,
-FOREIGN KEY (TP_USER_ID) REFERENCES USERS(USER_ID)
+TP_USER_USERNAME varchar(30),
+FOREIGN KEY (TP_USER_ID) REFERENCES USERS(USER_USERNAME)
 );
 Create table EXERCISE (
 EXERCISE_ID int auto_increment primary key,

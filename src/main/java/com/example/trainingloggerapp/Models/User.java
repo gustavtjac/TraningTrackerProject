@@ -3,7 +3,6 @@ package com.example.trainingloggerapp.Models;
 
 public class User {
     private String username;
-    private int id;
     private String name;
     private String password;
 
@@ -18,13 +17,6 @@ public class User {
         this.username = username;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
