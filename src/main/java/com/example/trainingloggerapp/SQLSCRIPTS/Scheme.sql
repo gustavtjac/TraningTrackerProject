@@ -14,7 +14,7 @@ USER_PASSWORD varchar(55) not null);
 Create table TRANINGSPROGRAMS (
 TP_ID int auto_increment primary key,
 TP_USER_USERNAME varchar(30),
-FOREIGN KEY (TP_USER_ID) REFERENCES USERS(USER_USERNAME)
+FOREIGN KEY (TP_USER_USERNAME) REFERENCES USERS(USER_USERNAME)
 );
 Create table EXERCISE (
 EXERCISE_ID int auto_increment primary key,
