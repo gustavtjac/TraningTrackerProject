@@ -1,0 +1,16 @@
+package com.example.trainingloggerapp.Service;
+
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+
+
+
+
+
+
+
+
+}
